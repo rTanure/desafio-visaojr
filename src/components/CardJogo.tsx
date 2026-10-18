@@ -1,3 +1,4 @@
+import './CardJogo.css';
 export type Jogo = {
     id: number;
     nome: string;
