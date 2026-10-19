@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap');
+
+
+.card-jogo {
+  width: 80%;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgb(236, 231, 231);
+  display: flex;
+  flex-direction: row;
+  margin: 30px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-jogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 14px 8px rgba(0, 0, 0, 0.75);
+}
+
+.card-jogo-imagem {
+  width: 32%;
+  flex-shrink: 0;
+  height: 202px;
+}
+
+.card-jogo-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.card-jogo-nome {
+  font-family: 'Oxanium', sans-serif;
+  font-size: 40px;
+  margin: 10px 10px;
+  font-weight: 500;
+}
+.card-jogo-consoles {
+  display: flex;
+  justify-content: left;
+  margin: 0px 10px;
+
+}
+.card-jogo-consoles img {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.card-jogo-faixa {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(231, 236, 231), rgb(180, 177, 177), grey);
+  padding: 15px;
+  margin: 42px 0 0 auto;
+}
+
+.card-jogo-valor {
+  padding-left: 20px;
+  color: rgb(12, 241, 12);
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Press Start 2P', cursive;
+}
