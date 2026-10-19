@@ -1,4 +1,5 @@
 import './CardJogo.css';
+
 export type Jogo = {
     id: number;
     nome: string;
@@ -19,9 +20,9 @@ export function CardJogo({ jogo }: CardJogoProps) {
             <div className="card-jogo-info">
                 <h3 className="card-jogo-nome">{jogo.nome}</h3>
 
-                <div className="card-jogo-consoles">fea
+                <div className="card-jogo-consoles">
                     {jogo.consoles.map((plataforma) => (
-                        <img key={plataforma} src={`/assets/${plataforma}.png`} alt={plataforma} />
+                        <img key={plataforma} src={`src/assets/${plataforma}.png`} alt={plataforma} />
                     ))}
                 </div>
 
