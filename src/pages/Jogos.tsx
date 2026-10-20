@@ -1,10 +1,11 @@
 import { CardJogo } from '../components/CardJogo.tsx';
 import {jogos} from '../data/jogos.ts';
+import './Jogos.css';
 
 export function Jogos() {
     return (
         <div>
-            <h1>TODOS OS JOGOS</h1>
+            <h1 id="titulo-jogos">TODOS OS JOGOS</h1>
 
             <div id="container-filtro">
                 <div id="botao-filtros">
