@@ -8,17 +8,19 @@ export function Jogos() {
             <h1 id="titulo-jogos">TODOS OS JOGOS</h1>
 
             <div id="container-filtro">
-                <div id="botao-filtros">
+                <button id="botao-filtros" type="button">
                     <h2>Filtros</h2>
-                </div>
-                <div id="botao-ordenar">
+                </button>
+                <button id="botao-ordenar" type="button">
                     <h2>Ordenar por</h2>
-                    <img src="" alt="seta de ordenação" />
-                </div>
-                <div id="botao-pesquisar">
-                    <h2>Pesquisar</h2>
-                    <img src="" alt="lupa" />
-                </div>
+                    <img src="src/assets/ordenar.png" alt="seta de ordenação" />
+                </button>
+                <input
+                    id="botao-pesquisar"
+                    type="text"
+                    placeholder="Pesquise um jogo"
+                    aria-label="Pesquise um jogo"
+                />
             </div>
             
             <div id="container-jogos">
