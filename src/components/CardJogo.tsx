@@ -22,7 +22,7 @@ export function CardJogo({ jogo }: CardJogoProps) {
 
                 <div className="card-jogo-consoles">
                     {jogo.consoles.map((plataforma) => (
-                        <img key={plataforma} src={`src/assets/${plataforma}.png`} alt={plataforma} />
+                        <img key={plataforma} src={`public/${plataforma}.png`} alt={plataforma} />
                     ))}
                 </div>
 

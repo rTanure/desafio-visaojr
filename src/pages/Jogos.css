@@ -48,7 +48,7 @@
     font-family: 'Press Start 2P', cursive;
     font-size: clamp(0.65rem, 1.3vw, 0.9rem);
 
-    background-image: url('../assets/lupa.png');
+    background-image: url('public/lupa.png');
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 24px 24px;
@@ -74,7 +74,7 @@
     margin-left: 10px;
   }
 
-  #container-filtro h2 {
+  .texto-botao {
       font-family: 'Press Start 2P', cursive;
       font-size: clamp(0.8rem, 1.5vw, 1.2rem);
       color: black;

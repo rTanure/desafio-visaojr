@@ -1,5 +1,5 @@
-import { CardJogo } from '../components/CardJogo.tsx';
-import {jogos} from '../data/jogos.ts';
+import { CardJogo } from '../components/CardJogo';
+import {jogos} from '../data/jogos';
 import './Jogos.css';
 
 export function Jogos() {
@@ -9,17 +9,16 @@ export function Jogos() {
 
             <div id="container-filtro">
                 <button id="botao-filtros" type="button">
-                    <h2>Filtros</h2>
+                    <span className="texto-botao">Filtros</span>
                 </button>
                 <button id="botao-ordenar" type="button">
-                    <h2>Ordenar por</h2>
-                    <img src="src/assets/ordenar.png" alt="seta de ordenação" />
+                    <span className="texto-botao">Ordenar por</span>
+                    <img src="public/ordenar.png" alt="seta de ordenação" />
                 </button>
                 <input
                     id="botao-pesquisar"
                     type="text"
                     placeholder="Pesquise um jogo"
-                    aria-label="Pesquise um jogo"
                 />
             </div>
             
