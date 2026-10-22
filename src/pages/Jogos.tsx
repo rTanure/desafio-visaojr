@@ -13,7 +13,7 @@ export function Jogos() {
                 </button>
                 <button id="botao-ordenar" type="button">
                     <span className="texto-botao">Ordenar por</span>
-                    <img src="public/ordenar.png" alt="seta de ordenação" />
+                    <img src="/ordenar.png" alt="seta de ordenação" />
                 </button>
                 <input
                     id="botao-pesquisar"
