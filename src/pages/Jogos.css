@@ -20,6 +20,7 @@
   }
 
   #container-filtro > button {
+    min-width: 0;
     padding: 12px 22px;
     box-sizing: border-box;
     cursor: pointer;
@@ -30,7 +31,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   #container-filtro > #botao-pesquisar {
@@ -48,7 +48,7 @@
     font-family: 'Press Start 2P', cursive;
     font-size: clamp(0.65rem, 1.3vw, 0.9rem);
 
-    background-image: url('public/lupa.png');
+    background-image: url('/lupa.png');
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 24px 24px;
@@ -72,6 +72,7 @@
   #botao-ordenar img{
     width: 4%;
     margin-left: 10px;
+    min-width: 24px;
   }
 
   .texto-botao {
@@ -86,4 +87,19 @@
   #container-filtro > button:hover {
     transform: translateY(-3px);
     box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 600px) {
+    #container-filtro {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    #container-filtro > button {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
+    #container-filtro > #botao-pesquisar {
+      padding-right: 52px;
+    }
   }
