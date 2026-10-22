@@ -6,6 +6,7 @@ export type Jogo = {
     imagem: string;
     valor: number;
     consoles: string[];
+    autor: string;
 };
 
 type CardJogoProps = {

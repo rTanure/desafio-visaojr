@@ -52,6 +52,13 @@
   border-radius: 4px;
 }
 
+.card-jogo-autor {
+  font-family: 'Oxanium', sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin: 0 15px 10px 15px;
+  color: #555;
+}
+
 .card-jogo-faixa {
   display: flex;
   justify-content: flex-end;
