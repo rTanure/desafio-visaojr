@@ -1,5 +1,25 @@
+:root {
+    --navy: #15153f;
+    --sky: #6eb3ff;
+    --lavender: #eef0ff;
+    --yellow: #ffc800;
+    --red: #e32323;
+    --blue: #1a52c8;
+    --green: #2aa84a;
+
+    --header-height: 130px;
+    --font-pixel: "Press Start 2P", monospace;
+    --font-body: "Pixelify Sans", system-ui, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--navy);
+    background: var(--lavender);
 }
