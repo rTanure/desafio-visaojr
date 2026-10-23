@@ -1,0 +1,116 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #fff;
+}
+
+.top {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.75rem;
+    border-bottom: 3px solid var(--navy);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    line-height: 1.3;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.mark {
+    font-size: 1.6rem;
+    color: var(--red);
+    text-shadow: 2px 2px 0 var(--yellow);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.iconBtn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 0.5rem;
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    color: var(--navy);
+    background: #fff;
+    border: 3px solid var(--navy);
+    box-shadow: 3px 3px 0 var(--navy);
+    cursor: pointer;
+}
+
+.iconBtn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--navy);
+}
+
+.iconBtn:focus-visible {
+    outline: 3px solid #1e88e5;
+    outline-offset: 2px;
+}
+
+.moon { background: var(--yellow); }
+.cart { background: var(--red); color: #fff; }
+
+.count { color: #fff; }
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-bottom: 3px solid var(--navy);
+}
+
+.menu a {
+    padding: 0.9rem 1rem;
+    font-family: var(--font-pixel);
+    font-size: 0.65rem;
+    color: var(--navy);
+    text-decoration: none;
+    border-top: 2px dashed #c9cdf5;
+}
+
+.menu a:first-child { border-top: none; }
+.menu a:hover,
+.menu a[aria-current="page"] { background: var(--yellow); }
+
+.search {
+    height: 66px;
+    padding: 12px;
+    background: #fff;
+    border-bottom: 3px solid var(--navy);
+}
+
+.search input {
+    width: 100%;
+    height: 38px;
+    padding: 0 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--navy);
+    background: var(--lavender);
+    border: 3px solid var(--navy);
+    box-shadow: 3px 3px 0 var(--navy);
+}
+
+.search input:focus-visible {
+    outline: 3px solid #1e88e5;
+    outline-offset: 2px;
+}
