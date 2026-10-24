@@ -5,7 +5,7 @@ import './Jogos.css';
 export function Jogos() {
     return (
         <div>
-            <h1 id="titulo-jogos">TODOS OS JOGOS</h1>
+            <h1 id="titulo-jogos">JOGOS À VENDA</h1>
 
             <div id="container-filtro">
                 <button id="botao-filtros" type="button">
