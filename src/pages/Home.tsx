@@ -1,12 +1,19 @@
+
+
 import { Depoimentos } from "../components/depoimentos";
+import { Footer } from "../components/footer";
 
 export function Home() {
   return (
-    <main>
-      <h1>Página Home</h1>
+    
+      <main>
+        <h1></h1>
+        {/* SEU COMPONENTE ENTRA AQUI */}
+        <Depoimentos />
+        <Footer />
+      </main>
 
-      {/* SEU COMPONENTE ENTRA AQUI */}
-      <Depoimentos />
-    </main>
+      
+    
   );
 }

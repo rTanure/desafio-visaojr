@@ -1,0 +1,23 @@
+
+
+.mainfooter {
+  width: 100%;
+  background-color: #0a0b28;
+}
+
+.footer {
+  width: 100%;
+  background-color: #0a0b28;
+  padding: 40px 20px;
+  min-height: 200px;
+  box-sizing: border-box;
+}
+
+
+/* 1. Remove as margens padrão do navegador que criam espaços em branco */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #0a0b28; /* A mesma cor azul escura do teu footer */
+}
