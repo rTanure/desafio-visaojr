@@ -3,7 +3,7 @@ import type {Jogo} from '../components/CardJogo';
 export const jogos: Jogo[] = [
     {
         id: 1,
-        nome: "Clar Obscure: Expedition 33",
+        nome: "Clair Obscure: Expedition 33",
         autor: "Sandfall Interactive",
         imagem: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/library_600x900.jpg",
         valor: 130,
