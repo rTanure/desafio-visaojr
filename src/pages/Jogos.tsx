@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { CardJogo } from "../components/CardJogo";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { jogos } from "../data/jogos";
 import "./Jogos.css";
 
@@ -78,7 +80,10 @@ export function Jogos() {
   });
 
   return (
-    <div>
+
+    <Header />
+
+    <main>
       <h1 id="titulo-jogos">JOGOS À VENDA</h1>
 
       <div id="container-filtro">
@@ -149,6 +154,9 @@ export function Jogos() {
       {jogosOrdenados.length === 0 && (
         <p id="sem-resultados">Nenhum jogo encontrado</p>
       )}
-    </div>
+    </main>
+
+    <Footer />
+
   );
 }
