@@ -22,6 +22,7 @@ export function Jogos() {
   const [filtrosAberto, setFiltrosAberto] = useState(false);
   const [filtrosSelecionados, setFiltrosSelecionados] = useState<string[]>([]);
   const [ordenacao, setOrdenacao] = useState<string>("");
+  const [pesquisa, setPesquisa] = useState('');
 
   function alternarOrdenar() {
     setOrdenarAberto(!ordenarAberto);
@@ -44,13 +45,18 @@ export function Jogos() {
   }
 
   const jogosFiltrados = jogos.filter((jogo) => {
-    if (filtrosSelecionados.length === 0) {
-      return true;
-    }
-    return jogo.consoles.some((console) =>
-      filtrosSelecionados.includes(console),
-    );
-  });
+    const correspondePesquisa = jogo.nome
+        .toLowerCase()
+        .includes(pesquisa.trim().toLowerCase());
+
+    const correspondeConsole =
+        filtrosSelecionados.length === 0 ||
+        jogo.consoles.some((console) =>
+            filtrosSelecionados.includes(console)
+        );
+
+    return correspondePesquisa && correspondeConsole;
+});
 
   const jogosOrdenados = [...jogosFiltrados].sort((a, b) => {
     switch (ordenacao) {
@@ -87,6 +93,8 @@ export function Jogos() {
           id="botao-pesquisar"
           type="text"
           placeholder="Pesquise um jogo"
+          value={pesquisa}
+          onChange={(e) => setPesquisa(e.target.value)}
         />
 
         {filtrosAberto && (
