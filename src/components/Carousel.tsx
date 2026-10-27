@@ -33,11 +33,30 @@ export function Carousel({
     // lógica do carrosel
 
     const [atual, setAtual] = useState(0);
+
+
+    //Pra mostrar quantidade de card visível diferente dpeendendo do dispositivo
+    let quantidadeVisivel;
+
+    if (width < 768) {
+        quantidadeVisivel = 1.2;
+   } else {
+    quantidadeVisivel = numberOfChildren;
+   }
+
+   //Pra mostrar os botões no PC e não no mobile
+   let posicaoControles;
+    if(width < 768) {
+        posicaoControles = "no-control";
+    }
+    else{
+        posicaoControles = controlPosition;
+    }
+
     const slides = useMemo( () => Children.toArray(children), [children] );
 
-    const totalPosicoes = Math.max( 1, slides.length - numberOfChildren + 1 );
-
-    const slideWidth = width / Math.max(1, numberOfChildren);
+    const totalPosicoes = Math.max(1, slides.length - quantidadeVisivel + 1);
+    const slideWidth = width / Math.max(1, quantidadeVisivel);
 
 
     const navegarPara = (index: number) => {
@@ -63,7 +82,7 @@ export function Carousel({
         navegarPara(atual + 1);
     };
 
-    const mostrarControles = controlPosition !== "no-control" && totalPosicoes > 1 ;
+    const mostrarControles = posicaoControles !== "no-control" && totalPosicoes > 1;
 
     useEffect(() => {
         if(!autoPlay) return
@@ -90,9 +109,9 @@ export function Carousel({
 
     return (
         <div
-            className={`carousel ${controlPosition}`}
-            ref={carouselRef}
-        >
+            className={`carousel ${posicaoControles}`} ref={carouselRef}>
+            
+        
             <div
                 className="carousel-container"
                 onScroll={(event) => {
