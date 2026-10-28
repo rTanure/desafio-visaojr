@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap');
+
+.card-jogo {
+  width: 95%;
+  max-width: 1200px;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgb(236, 231, 231);
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.card-jogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 14px 8px rgba(0, 0, 0, 0.75);
+}
+
+.card-jogo-imagem {
+  width: 25%;
+  min-width: 150px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-jogo-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-jogo-nome {
+  font-family: 'Oxanium', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  margin: 10px 15px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.card-jogo-consoles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 15px 10px 15px;
+}
+
+.card-jogo-consoles img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.card-jogo-autor {
+  font-family: 'Oxanium', sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin: 0 15px 10px 15px;
+  color: #555;
+}
+
+.card-jogo-faixa {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(231, 236, 231), rgb(180, 177, 177), grey);
+  padding: 10px 15px;
+  margin-top: auto;
+}
+
+.card-jogo-valor {
+  color: rgb(12, 241, 12);
+  font-weight: bold;
+  font-size: clamp(0.75rem, 1.3vw, 1rem);
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 600px) {
+  .card-jogo {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .card-jogo-imagem {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-jogo-nome {
+    margin: 10px 12px 6px 12px;
+  }
+
+  .card-jogo-consoles {
+    margin: 0 12px 10px 12px;
+  }
+}
