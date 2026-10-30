@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CardJogo } from "../components/CardJogo";
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { jogos } from "../data/jogos";
 import "./Jogos.css";
 
@@ -81,6 +82,8 @@ export function Jogos() {
   return (
     <>
 
+     <Header />
+
     <main>
       <h1 id="titulo-jogos">JOGOS À VENDA</h1>
 
@@ -153,8 +156,8 @@ export function Jogos() {
         <p id="sem-resultados">Nenhum jogo encontrado</p>
       )}
     </main>
-
-    
+       <Footer />
+      
       </> 
   );
 }

@@ -3,7 +3,8 @@ import { useState } from "react";
 import { CardConsole } from "../components/CardConsoles";
 import { consoles } from "../data/consoles";
 import "./Consoles.css";
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 const opcoesFiltro = [
   { valor: "Sony", texto: "Sony" },
   { valor: "Microsoft", texto: "Microsoft" },
@@ -95,7 +96,8 @@ export function Consoles() {
 
   return (
     <>
-      
+       <Header />
+
       <main>
         <h1 id="titulo-consoles">CONSOLES À VENDA</h1>
 
@@ -214,7 +216,7 @@ export function Consoles() {
           </p>
         )}
       </main>
-
+         <Footer />
         
     </>
   );
