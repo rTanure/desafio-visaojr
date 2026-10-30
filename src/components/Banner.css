@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.banner-container {
+  background-color: #f4f6ff;
+  padding: 60px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-card {
+  background-color: #fcc419;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+  max-width: 1020px;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.banner-texto {
+  max-width: 650px;
+}
+
+.banner-texto h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  color: #000000;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.banner-texto p {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  color: #000000;
+  line-height: 1.8;
+  margin: 0 0 28px 0;
+}
+
+.banner-botoes {
+  display: flex;
+  gap: 16px;
+}
+
+.banner-botoes a {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 14px 20px;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.banner-botoes a:hover {
+  filter: brightness(0.85);
+}
+
+.botao-whatsapp {
+  background-color: #e02424;
+}
+
+.botao-instagram {
+  background-color: #1a56db;
+}
+
+.banner-trofeu {
+  width: 180px;
+  height: auto;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .banner-card {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .banner-botoes {
+    flex-direction: column;
+  }
+
+  .banner-trofeu {
+    width: 140px;
+  }
+}
