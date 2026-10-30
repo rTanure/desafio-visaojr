@@ -80,8 +80,9 @@ export function Jogos() {
   });
 
   return (
+    <>
 
-    <Header />
+     <Header />
 
     <main>
       <h1 id="titulo-jogos">JOGOS À VENDA</h1>
@@ -155,8 +156,8 @@ export function Jogos() {
         <p id="sem-resultados">Nenhum jogo encontrado</p>
       )}
     </main>
-
-    <Footer />
-
+       <Footer />
+      
+      </> 
   );
 }
