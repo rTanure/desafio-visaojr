@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { consoles } from "../data/consoles";
 import { CardConsole } from "../components/listagem/CardConsole";
-import { Chips, collator, normalizar, Pagina, plural, Toolbar, Vazio, type Opcao } from "../components/listagem/blocos";
+import { Chips, Pagina, Toolbar, Vazio, type Opcao } from "../components/listagem/blocos";
+import { collator, normalizar, plural } from "../components/listagem/utils";
 import styles from "../components/listagem/listagem.module.css";
 
 type Ordem = "padrao" | "nome-az" | "nome-za" | "preco-menor" | "preco-maior";

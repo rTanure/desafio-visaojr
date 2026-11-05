@@ -4,7 +4,8 @@ import { games } from "../data/games";
 import { studios } from "../data/studios";
 import { studioName } from "../components/detalhe/dados";
 import { CardDiretor } from "../components/listagem/CardDiretor";
-import { collator, normalizar, Pagina, plural, Toolbar, Vazio, type Opcao } from "../components/listagem/blocos";
+import { Pagina, Toolbar, Vazio, type Opcao } from "../components/listagem/blocos";
+import { collator, normalizar, plural } from "../components/listagem/utils";
 import styles from "../components/listagem/listagem.module.css";
 
 type Ordem = "padrao" | "nome-az" | "nome-za" | "mais-jogos";

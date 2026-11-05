@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { GameCard } from "../components/detalhe/GameCard";
 import { platformFilters, pricedGames, type PlatformFilter } from "../components/home/homeData";
-import { Chips, collator, normalizar, Pagina, plural, Toolbar, Vazio, type Opcao } from "../components/listagem/blocos";
+import { Chips, Pagina, Toolbar, Vazio, type Opcao } from "../components/listagem/blocos";
+import { collator, normalizar, plural } from "../components/listagem/utils";
 import styles from "../components/listagem/listagem.module.css";
 
 type Ordem = "padrao" | "nome-az" | "nome-za" | "preco-menor" | "preco-maior";

@@ -3,19 +3,6 @@ import { Button } from "../Button/Button";
 import shared from "../home/shared.module.css";
 import styles from "./listagem.module.css";
 
-/** Normaliza para busca sem acento e sem diferença de caixa. */
-export function normalizar(texto: string): string {
-    return texto
-        .normalize("NFD")
-        .replace(/[̀-ͯ]/g, "")
-        .toLowerCase()
-        .trim();
-}
-
-export function collator(a: string, b: string): number {
-    return a.localeCompare(b, "pt-BR");
-}
-
 type PaginaProps = { eyebrow: string; title: string; count: string; children: ReactNode };
 
 /** Casca das listagens: cabeçalho de seção (eyebrow + título + contador) e conteúdo. */
@@ -116,8 +103,4 @@ export function Vazio({ children, onClear }: { children: ReactNode; onClear: () 
             </Button>
         </div>
     );
-}
-
-export function plural(n: number, um: string, varios: string): string {
-    return `${n} ${n === 1 ? um : varios}`;
 }
