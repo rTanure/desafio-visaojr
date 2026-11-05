@@ -1,27 +1,25 @@
-import { Banner } from "../components/Banner/Banner";
-import { JogosDestaque } from "../components/JogosDestaque";
-import { SavePoint } from "../components/SavePoint";
-import { Depoimentos } from "../components/depoimentos";
-import { BannerCTA } from "../components/BannerCTA";
+import { Hero } from "../components/home/Hero";
+import { Promocoes } from "../components/home/Promocoes";
+import { Beneficios } from "../components/home/Beneficios";
+import { Diretores } from "../components/home/Diretores";
+import { Consoles } from "../components/home/Consoles";
+import { Jogos } from "../components/home/Jogos";
+import { Depoimentos } from "../components/home/Depoimentos";
+import { FrasesSavePoint } from "../components/home/FrasesSavePoint";
+import { ChamadaFinal } from "../components/home/ChamadaFinal";
 
 export function Home() {
     return (
         <>
-            <div>
-                <Banner />
-            </div>
-
-            <div id="jogos">
-                <JogosDestaque />
-            </div>
-
-            <SavePoint />
-
-            <div id="depoimentos">
-                <Depoimentos />
-            </div>
-
-            <BannerCTA />
+            <Hero />
+            <Promocoes />
+            <Beneficios />
+            <Diretores />
+            <Consoles />
+            <Jogos />
+            <Depoimentos />
+            <FrasesSavePoint />
+            <ChamadaFinal />
         </>
-    )
+    );
 }
