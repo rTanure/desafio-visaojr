@@ -9,7 +9,7 @@ export function DiretorDetalhe() {
     const { slug } = useParams();
     const director = getDirector(slug);
 
-    if (!director) return <NaoEncontrado what="Diretor" backTo="/" backLabel="Voltar para o início" />;
+    if (!director) return <NaoEncontrado what="Diretor" backTo="/diretores" backLabel="Ver todos os diretores" />;
 
     const items = gamesOfDirector(director.slug);
 

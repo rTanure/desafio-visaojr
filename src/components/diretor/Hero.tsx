@@ -62,7 +62,7 @@ export function Hero({ director, gameCount }: Props) {
                                 Ver jogos do diretor
                             </Button>
                         )}
-                        <Button variant="secondary" to="/" className={`${base.cta} ${styles.back}`}>
+                        <Button variant="secondary" to="/diretores" className={`${base.cta} ${styles.back}`}>
                             ‹ Voltar
                         </Button>
                     </div>
