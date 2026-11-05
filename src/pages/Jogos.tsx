@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { CardJogo } from "../components/CardJogo";
 //import Header from '../components/Header';
-//import Footer from '../components/Footer';
 import { jogos } from "../data/jogos";
 import "./Jogos.css";
 
@@ -156,7 +155,6 @@ export function Jogos() {
       )}
     </main>
 
-   {/*<Footer />*/}
 </>
   );
 }
