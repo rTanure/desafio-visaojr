@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Button.module.css";
 
@@ -14,17 +14,21 @@ type CommonProps = {
 };
 
 type ButtonAsButton = CommonProps &
-    Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof CommonProps> & { to?: undefined };
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof CommonProps> & { to?: undefined; href?: undefined };
 
-type ButtonAsLink = CommonProps & { to: string };
+type ButtonAsLink = CommonProps & { to: string; href?: undefined };
 
-export type ButtonProps = ButtonAsButton | ButtonAsLink;
+// Link externo ou âncora (mailto:, #secao, https://...)
+type ButtonAsAnchor = CommonProps &
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof CommonProps> & { href: string; to?: undefined };
+
+export type ButtonProps = ButtonAsButton | ButtonAsLink | ButtonAsAnchor;
 
 /**
- * primary   → vermelho  (Ver ofertas, Comprar, Comprar agora)
- * secondary → branco    (Falar no WhatsApp, filtros)
- * accent    → amarelo   (Adicionar ao carrinho, Enviar para o Mayk)
- * info      → azul      (Ver jogos)
+ * primary   → vermelho  (.b-red: carrinho, Ver ofertas, Comprar)
+ * secondary → superfície (.b-ghost: Falar no WhatsApp, menu, filtros)
+ * accent    → amarelo   (.b-yel: tema, Enviar para o Mayk)
+ * info      → azul      (.b-blue: Ver jogos)
  */
 export function Button({
     variant = "primary",
@@ -39,10 +43,19 @@ export function Button({
         .join(" ");
 
     if ("to" in rest && rest.to !== undefined) {
+        const { to, ...linkProps } = rest;
         return (
-            <Link to={rest.to} className={classes}>
+            <Link to={to} className={classes} {...linkProps}>
                 {children}
             </Link>
+        );
+    }
+
+    if ("href" in rest && rest.href !== undefined) {
+        return (
+            <a className={classes} {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+                {children}
+            </a>
         );
     }
 
