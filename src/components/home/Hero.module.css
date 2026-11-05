@@ -1,0 +1,403 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--hero);
+    --gold: #c9a227;
+}
+
+.cloudA,
+.cloudB {
+    position: absolute;
+    pointer-events: none;
+}
+
+.cloudA {
+    left: 4%;
+    top: 36px;
+    width: 160px;
+    opacity: 0.9;
+}
+
+.cloudB {
+    right: 8%;
+    top: 24px;
+    width: 112px;
+    opacity: 0.8;
+}
+
+.viewport {
+    position: relative;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    transition: transform 0.45s steps(8);
+}
+
+.slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.slideOn {
+    visibility: visible;
+    transition: visibility 0s;
+}
+
+.slideOff {
+    visibility: hidden;
+    transition: visibility 0s linear 0.45s;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+    gap: 48px;
+    align-items: center;
+    padding-top: 72px;
+    padding-bottom: 40px;
+}
+
+.copy {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--navy);
+    color: var(--yellow);
+    padding: 10px 14px;
+    font-family: var(--font-pixel);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.heading {
+    margin: 0;
+    font-family: var(--font-pixel);
+    font-size: clamp(26px, 3.4vw, 46px);
+    line-height: 1.35;
+    font-weight: 400;
+    color: var(--ink);
+}
+
+.sub {
+    margin: 0;
+    max-width: 520px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+}
+
+.ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.cta {
+    font-size: 12px;
+    min-height: 56px;
+    padding: 0 24px;
+}
+
+.coins {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.coinsText {
+    margin-left: 6px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.cardCover {
+    position: relative;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 4px solid var(--line);
+    background-image: conic-gradient(rgba(0, 0, 0, 0.14) 25%, transparent 0 50%, rgba(0, 0, 0, 0.14) 0 75%, transparent 0);
+    background-size: 16px 16px;
+}
+
+.coverBlue { background-color: var(--blue); }
+.coverRed { background-color: var(--red); }
+.coverGreen { background-color: var(--green); }
+.coverGold { background-color: var(--gold); }
+
+.cardBody {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.cardName {
+    margin: 0;
+    font-family: var(--font-pixel);
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.cardDesc {
+    margin: 6px 0 0;
+    color: var(--muted);
+}
+
+.cardPrice {
+    text-align: right;
+}
+
+.priceNow {
+    font-family: var(--font-pixel);
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--red);
+}
+
+.cardBtns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.cardBtn {
+    min-width: 0;
+}
+
+.long { display: inline; }
+.short { display: none; }
+
+.tag {
+    position: absolute;
+    top: -18px;
+    left: 20px;
+    background: var(--yellow);
+    color: var(--navy);
+    border: 4px solid var(--line);
+    padding: 8px 12px;
+    font-family: var(--font-pixel);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.controls {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 3px solid var(--line);
+    background: var(--surface);
+    transition: width 0.2s steps(3);
+}
+
+.dotOn {
+    width: 40px;
+    background: var(--yellow);
+}
+
+.count {
+    min-width: 44px;
+    text-align: center;
+    font-family: var(--font-pixel);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.grass {
+    height: 14px;
+    background: var(--green);
+    border-top: 4px solid var(--navy);
+}
+
+.bricks {
+    height: 32px;
+    background-color: #c84c0c;
+    background-image: linear-gradient(var(--navy) 0 3px, transparent 3px), linear-gradient(90deg, var(--navy) 0 3px, transparent 3px);
+    background-size: 32px 16px;
+    border-top: 4px solid var(--navy);
+}
+
+@media (max-width: 767px) {
+    .cloudA,
+    .cloudB {
+        display: none;
+    }
+
+    .grid {
+        gap: 18px;
+        padding-top: 36px;
+        padding-bottom: 28px;
+    }
+
+    .copy {
+        gap: 18px;
+    }
+
+    .eyebrow {
+        gap: 8px;
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+
+    .heading {
+        font-size: 23px;
+    }
+
+    .sub {
+        font-size: 19px;
+    }
+
+    .ctas {
+        flex-direction: column;
+        gap: 12px;
+        align-self: stretch;
+    }
+
+    .cta {
+        min-height: 52px;
+        padding: 0 16px;
+        font-size: 10px;
+    }
+
+    .coins {
+        display: none;
+    }
+
+    .card {
+        margin-top: 18px;
+    }
+
+    .cardCover {
+        height: 150px;
+        border-bottom-width: 3px;
+    }
+
+    .cardCover svg {
+        width: 110px;
+        height: 110px;
+    }
+
+    .cardBody {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .cardName {
+        font-size: 14px;
+    }
+
+    .cardDesc {
+        font-size: 16px;
+    }
+
+    .priceNow {
+        font-size: 16px;
+    }
+
+    .cardBtns {
+        gap: 10px;
+    }
+
+    .cardBtn {
+        padding: 0 8px;
+        font-size: 9px;
+    }
+
+    .long { display: none; }
+    .short { display: inline; }
+
+    .tag {
+        top: -16px;
+        left: 14px;
+        border-width: 4px;
+        padding: 6px 10px;
+        font-size: 9px;
+    }
+
+    .controls {
+        gap: 10px;
+        padding-bottom: 28px;
+    }
+
+    .dots {
+        gap: 6px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .dotOn {
+        width: 28px;
+    }
+
+    .grass {
+        height: 10px;
+    }
+
+    .bricks {
+        height: 24px;
+        background-size: 24px 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cardPrice {
+        order: 2;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: baseline;
+        gap: 10px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .cardTop {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
