@@ -1,0 +1,125 @@
+.section {
+    padding: 72px 0;
+    border-bottom: 0;
+}
+
+.head {
+    margin-bottom: 28px;
+}
+
+.title {
+    margin: 0;
+    font-family: var(--font-pixel);
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.card:hover {
+    color: var(--ink);
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    border: 3px solid var(--line);
+    font-family: var(--font-pixel);
+    font-size: 13px;
+}
+
+.toneOrange { background: var(--orange); }
+.toneRed { background: var(--red); }
+.toneBlue { background: var(--blue); color: #ffffff; }
+.toneGreen { background: var(--green); }
+.toneYellow { background: var(--yellow); }
+.toneSky { background: var(--hero); }
+
+.who {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.name {
+    font-size: 19px;
+}
+
+.studio {
+    font-size: 15px;
+    color: var(--muted);
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding: 36px 0 24px;
+    }
+
+    .head {
+        margin-bottom: 16px;
+    }
+
+    .title {
+        font-size: 17px;
+    }
+
+    .gridWrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .grid {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 16px;
+        padding: 4px 16px 14px;
+        scrollbar-width: none;
+    }
+
+    .grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        flex: none;
+        width: 210px;
+        gap: 10px;
+        padding: 10px;
+        scroll-snap-align: start;
+    }
+
+    .avatar {
+        width: 44px;
+        height: 44px;
+        font-size: 11px;
+    }
+
+    .name {
+        font-size: 15px;
+    }
+
+    .studio {
+        font-size: 14px;
+    }
+}
