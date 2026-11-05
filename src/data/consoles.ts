@@ -1,5 +1,17 @@
 
-import type { Console } from '../components/CardConsoles';
+import type { RegisteredPlatforms } from './platforms';
+
+export type Console = {
+    id: number;
+    nome: string;
+    slug?: string;
+    plataforma?: RegisteredPlatforms; // plataforma de jogos que o console roda
+    imagem: string;
+    valor: number;
+    fabricante: string;
+    tipo: string;
+    geracao: string;
+};
 
 export const consoles: Console[] = [
     {

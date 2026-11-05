@@ -1,4 +1,4 @@
-import type { Console } from "../CardConsoles";
+import type { Console } from "../../data/consoles";
 import shared from "../home/shared.module.css";
 import base from "../detalhe/detalhe.module.css";
 import styles from "./Especificacoes.module.css";

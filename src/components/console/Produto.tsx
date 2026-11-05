@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Console } from "../CardConsoles";
+import type { Console } from "../../data/consoles";
 import { Button } from "../Button/Button";
 import { Crumbs } from "../detalhe/Crumbs";
 import { WHATSAPP_URL, formatPrice } from "../detalhe/dados";

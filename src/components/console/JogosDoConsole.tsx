@@ -1,4 +1,4 @@
-import type { Console } from "../CardConsoles";
+import type { Console } from "../../data/consoles";
 import { GameCard } from "../detalhe/GameCard";
 import { gamesOfPlatform } from "../detalhe/dados";
 import shared from "../home/shared.module.css";

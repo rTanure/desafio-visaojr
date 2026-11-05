@@ -5,8 +5,7 @@ import { platforms, type RegisteredPlatforms } from "../../data/platforms";
 import { publishers } from "../../data/publishers";
 import { stores } from "../../data/stores";
 import { studios } from "../../data/studios";
-import { consoles } from "../../data/consoles";
-import type { Console } from "../CardConsoles";
+import { consoles, type Console } from "../../data/consoles";
 
 export const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=553193327631";
 
