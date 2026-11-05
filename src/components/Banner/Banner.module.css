@@ -1,7 +1,7 @@
 .hero {
-    background: var(--sky);
+    background: var(--hero);
     padding: 1.5rem 1rem 2rem;
-    border-bottom: 3px solid var(--navy);
+    border-bottom: 3px solid var(--line);
 }
 
 .inner {
@@ -50,9 +50,9 @@
 /* card "Destaque da semana" */
 .card {
     position: relative;
-    background: #fff;
-    border: 3px solid var(--navy);
-    box-shadow: 4px 4px 0 var(--navy);
+    background: var(--surface);
+    border: 3px solid var(--line);
+    box-shadow: 4px 4px 0 var(--line);
 }
 
 .badge {
@@ -73,7 +73,7 @@
     justify-content: center;
     height: 150px;
     background: linear-gradient(#2f74d6 0 55%, #1a52c8 55% 100%);
-    border-bottom: 3px solid var(--navy);
+    border-bottom: 3px solid var(--line);
 }
 
 .console {
@@ -132,7 +132,7 @@
 
 .oldPrice {
     font-size: 0.8rem;
-    color: #6b6b8a;
+    color: var(--muted);
 }
 
 .actions {

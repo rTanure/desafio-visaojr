@@ -1,15 +1,39 @@
+/* Tokens de tema da canvas. Fonte única: não crie variáveis de cor fora daqui. */
 :root {
-    --navy: #15153f;
-    --sky: #6eb3ff;
-    --lavender: #eef0ff;
+    /* Marca: iguais nos dois temas */
+    --navy: #12123a;
     --yellow: #ffc800;
-    --red: #e32323;
-    --blue: #1a52c8;
-    --green: #2aa84a;
+    --red: #e52521;
+    --blue: #1f5fd6;
+    --green: #2ba84a;
+    --orange: #f7871e;
 
-    --header-height: 130px;
+    --header-height: 81px;
     --font-pixel: "Press Start 2P", monospace;
     --font-body: "Pixelify Sans", system-ui, sans-serif;
+
+    /* Tema claro (padrão) */
+    color-scheme: light;
+    --bg: #f2f5ff;
+    --surface: #ffffff;
+    --surface2: #e3eaff;
+    --ink: #12123a;
+    --muted: #474c78;
+    --line: #12123a;
+    --hero: #6cb4ff;
+    --link: #1f5fd6;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0b0d2e;
+    --surface: #171a4a;
+    --surface2: #22266a;
+    --ink: #f4f5ff;
+    --muted: #b9bdeb;
+    --line: #000000;
+    --hero: #151a5c;
+    --link: #ffc800;
 }
 
 * {
@@ -20,6 +44,28 @@
 
 button {
     cursor: pointer;
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--ink);
+}
+
+:focus-visible {
+    outline: 3px dashed var(--yellow);
+    outline-offset: 3px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }
 
 .carousel {
@@ -102,6 +148,8 @@ button {
 
 body {
     font-family: var(--font-body);
-    color: var(--navy);
-    background: var(--lavender);
+    font-size: 18px;
+    line-height: 1.45;
+    color: var(--ink);
+    background: var(--bg);
 }
