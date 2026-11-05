@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+
+
+.savepoint-container {
+  background-color: #0c0f38;
+  padding: 48px 0;
+  width: 100%;
+}
+
+.savepoint-content {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.savepoint-header {
+  margin-bottom: 24px;
+}
+
+.savepoint-tag {
+  font-family: 'Press Start 2P', cursive, monospace;
+  font-size: 9px;
+  color: #fcc419;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.savepoint-header h2 {
+  font-family: 'Press Start 2P', cursive, monospace;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.savepoint-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card-desktop {
+  display: block;
+  width: 240px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.card-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+@media (max-width: 768px) {
+  .savepoint-content {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .savepoint-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .card-desktop {
+    display: none;
+  }
+
+  .card-mobile {
+    display: block;
+    max-width: 360px;
+  }
+}
