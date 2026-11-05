@@ -1,7 +1,7 @@
-import "./Banner.css";
+import "./BannerCTA.css";
 
 
-export function Banner() {
+export function BannerCTA() {
   return (
     <section className="banner-container">
       <div className="banner-card">
