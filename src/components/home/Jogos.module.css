@@ -1,0 +1,140 @@
+.section {
+    padding: 40px 0 80px;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.count {
+    color: var(--muted);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 28px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.card:hover {
+    color: var(--ink);
+}
+
+.body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.name {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.plat {
+    font-size: 15px;
+    color: var(--muted);
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+    gap: 8px;
+}
+
+.price {
+    font-family: var(--font-pixel);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--red);
+}
+
+.cart {
+    font-family: var(--font-pixel);
+    font-size: 9px;
+    line-height: 1.5;
+    background: var(--yellow);
+    color: var(--navy);
+    border: 3px solid var(--navy);
+    padding: 6px 8px;
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding: 28px 0 44px;
+    }
+
+    .inner {
+        gap: 14px;
+    }
+
+    .count {
+        font-size: 15px;
+    }
+
+    .chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+        margin: 0 -16px;
+        padding: 4px 16px 14px;
+        scrollbar-width: none;
+    }
+
+    .chips::-webkit-scrollbar {
+        display: none;
+    }
+
+    .chip {
+        flex: none;
+        min-height: 44px;
+        box-shadow: 3px 3px 0 var(--line);
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .body {
+        padding: 10px;
+        gap: 4px;
+    }
+
+    .name {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    .plat {
+        font-size: 13px;
+    }
+
+    .price {
+        font-size: 11px;
+    }
+
+    .cart {
+        display: none;
+    }
+}
