@@ -1,0 +1,374 @@
+.section {
+    padding: 72px 0;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.side {
+    flex: 1 1 360px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.summary {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.avgBlock {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.avg {
+    font-family: var(--font-pixel);
+    font-size: 34px;
+    line-height: 1.5;
+}
+
+.avgSub {
+    color: var(--muted);
+}
+
+.dist {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.distRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.distN {
+    width: 22px;
+}
+
+.bar {
+    flex: 1;
+    height: 14px;
+    border: 3px solid var(--line);
+    background: var(--bg);
+    display: block;
+}
+
+.fill {
+    display: block;
+    height: 100%;
+    background: var(--orange);
+}
+
+.distCount {
+    width: 22px;
+    text-align: right;
+}
+
+.form {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.formTitle {
+    margin: 0;
+    font-family: var(--font-pixel);
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.formLegend {
+    padding: 0;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.picker {
+    display: flex;
+    gap: 6px;
+}
+
+.pick {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line);
+    background: var(--bg);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 16px;
+}
+
+.field {
+    height: 48px;
+    width: 100%;
+    padding: 0 12px;
+    border: 4px solid var(--line);
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 18px;
+}
+
+.area {
+    height: auto;
+    padding: 10px 12px;
+    resize: vertical;
+}
+
+.submit {
+    min-height: 48px;
+    padding: 0 18px;
+    border: 4px solid var(--line);
+    box-shadow: 4px 4px 0 var(--line);
+    background: var(--red);
+    color: #ffffff;
+    font-family: var(--font-pixel);
+    font-size: 11px;
+    line-height: 1.4;
+    transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.submit:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--line);
+}
+
+.list {
+    flex: 999 1 560px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cardHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border: 3px solid var(--line);
+    font-family: var(--font-pixel);
+    font-size: 12px;
+}
+
+.toneRed { background: var(--red); }
+.toneBlue { background: var(--blue); }
+.toneGreen { background: var(--green); }
+.toneOrange { background: var(--orange); }
+.toneNavy { background: var(--navy); }
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.who {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.meta {
+    font-size: 15px;
+    color: var(--muted);
+}
+
+.cardStars {
+    display: flex;
+    gap: 3px;
+}
+
+.body {
+    margin: 0;
+    font-size: 19px;
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding: 36px 0 40px;
+    }
+
+    .inner {
+        gap: 20px;
+    }
+
+    .cols {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .side {
+        display: contents;
+    }
+
+    .summary {
+        order: 1;
+        padding: 18px;
+        flex-direction: row;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .avgBlock {
+        flex: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .avg {
+        font-size: 26px;
+    }
+
+    .avgSub {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .deDe {
+        display: none;
+    }
+
+    .dist {
+        flex: 1;
+        min-width: 0;
+        gap: 6px;
+    }
+
+    .distRow {
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .distN {
+        width: 20px;
+    }
+
+    .bar {
+        height: 12px;
+    }
+
+    .distCount {
+        width: 14px;
+    }
+
+    .list {
+        order: 2;
+        flex: none;
+        gap: 16px;
+    }
+
+    .form {
+        order: 3;
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .formTitle {
+        font-size: 11px;
+    }
+
+    .formLegend {
+        font-size: 15px;
+    }
+
+    .pick {
+        width: 48px;
+        height: 48px;
+    }
+
+    .label {
+        font-size: 15px;
+    }
+
+    .field {
+        font-size: 17px;
+    }
+
+    .submit {
+        min-height: 52px;
+        font-size: 10px;
+    }
+
+    .card {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .cardHead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .person {
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 11px;
+    }
+
+    .meta {
+        font-size: 14px;
+    }
+
+    .body {
+        font-size: 17px;
+    }
+}

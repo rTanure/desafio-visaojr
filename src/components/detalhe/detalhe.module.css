@@ -79,6 +79,7 @@
 }
 
 .spec dt {
+    flex: none;
     color: var(--muted);
 }
 
@@ -86,6 +87,7 @@
     margin: 0;
     font-weight: 700;
     text-align: right;
+    overflow-wrap: break-word;
 }
 
 .priceBox {

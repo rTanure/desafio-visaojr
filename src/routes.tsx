@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { Sobre } from "./pages/Sobre";
 import { Jogos } from "./pages/Jogos";
 import { Consoles } from "./pages/Consoles";
+import { JogoDetalhe } from "./pages/JogoDetalhe";
 
 export const routes: RouteObject[] = [
     {
@@ -20,6 +21,10 @@ export const routes: RouteObject[] = [
             {
                 path: "/jogos",
                 element: <Jogos />
+            },
+            {
+                path: "/jogos/:slug",
+                element: <JogoDetalhe />
             },
             {
                 path: "/consoles",
