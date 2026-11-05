@@ -5,6 +5,7 @@ import { Sobre } from "./pages/Sobre";
 import { Jogos } from "./pages/Jogos";
 import { Consoles } from "./pages/Consoles";
 import { JogoDetalhe } from "./pages/JogoDetalhe";
+import { ConsoleDetalhe } from "./pages/ConsoleDetalhe";
 
 export const routes: RouteObject[] = [
     {
@@ -29,6 +30,10 @@ export const routes: RouteObject[] = [
             {
                 path: "/consoles",
                 element: <Consoles />
+            },
+            {
+                path: "/consoles/:slug",
+                element: <ConsoleDetalhe />
             }
         ]
     }

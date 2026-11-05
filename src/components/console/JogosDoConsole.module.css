@@ -1,0 +1,40 @@
+.section {
+    padding: 72px 0 80px;
+    border-bottom: 0;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.count {
+    color: var(--muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 28px;
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding: 36px 0 44px;
+    }
+
+    .inner {
+        gap: 14px;
+    }
+
+    .count {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}

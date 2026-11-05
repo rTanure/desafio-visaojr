@@ -1,0 +1,27 @@
+.section {
+    padding: 0 0 72px;
+}
+
+.box {
+    max-width: 620px;
+    padding: 28px;
+}
+
+.box h2 {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding-bottom: 40px;
+    }
+
+    .box {
+        max-width: none;
+        padding: 18px;
+    }
+
+    .box h2 {
+        margin-bottom: 8px;
+    }
+}
