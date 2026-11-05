@@ -1,160 +1,70 @@
 import { useState } from "react";
-import { CardJogo } from "../components/CardJogo";
-//import Header from '../components/Header';
-import { jogos } from "../data/jogos";
-import "./Jogos.css";
+import { GameCard } from "../components/detalhe/GameCard";
+import { platformFilters, pricedGames, type PlatformFilter } from "../components/home/homeData";
+import { Chips, collator, normalizar, Pagina, plural, Toolbar, Vazio, type Opcao } from "../components/listagem/blocos";
+import styles from "../components/listagem/listagem.module.css";
 
-const opcoesFiltro = [
-  { valor: "playstation", texto: "PlayStation" },
-  { valor: "xbox", texto: "Xbox" },
-  { valor: "switch", texto: "Switch" },
-  { valor: "pc", texto: "PC" },
+type Ordem = "padrao" | "nome-az" | "nome-za" | "preco-menor" | "preco-maior";
+
+const ordens: (Opcao & { value: Ordem })[] = [
+    { value: "padrao", label: "Padrão" },
+    { value: "nome-az", label: "Nome (A-Z)" },
+    { value: "nome-za", label: "Nome (Z-A)" },
+    { value: "preco-menor", label: "Menor preço" },
+    { value: "preco-maior", label: "Maior preço" },
 ];
 
-const opcoesOrdenacao = [
-  { valor: "nome-az", texto: "Nome (A-Z)" },
-  { valor: "nome-za", texto: "Nome (Z-A)" },
-  { valor: "preco-menor", texto: "Menor preço" },
-  { valor: "preco-maior", texto: "Maior preço" },
-];
+const chipOptions: Opcao[] = platformFilters.map((f) => ({ value: f.id, label: f.label }));
 
 export function Jogos() {
-  const [ordenarAberto, setOrdenarAberto] = useState(false);
-  const [filtrosAberto, setFiltrosAberto] = useState(false);
-  const [filtrosSelecionados, setFiltrosSelecionados] = useState<string[]>([]);
-  const [ordenacao, setOrdenacao] = useState<string>("");
-  const [pesquisa, setPesquisa] = useState('');
+    const [search, setSearch] = useState("");
+    const [filter, setFilter] = useState<PlatformFilter>("all");
+    const [ordem, setOrdem] = useState<Ordem>("padrao");
 
-  function alternarOrdenar() {
-    setOrdenarAberto(!ordenarAberto);
-    setFiltrosAberto(false);
-  }
+    const termo = normalizar(search);
+    const lista = pricedGames
+        .filter((g) => (filter === "all" || g.families.has(filter)) && normalizar(g.game.name).includes(termo))
+        .sort((a, b) => {
+            switch (ordem) {
+                case "nome-az":
+                    return collator(a.game.name, b.game.name);
+                case "nome-za":
+                    return collator(b.game.name, a.game.name);
+                case "preco-menor":
+                    return a.price - b.price;
+                case "preco-maior":
+                    return b.price - a.price;
+                default:
+                    return 0;
+            }
+        });
 
-  function alternarFiltros() {
-    setFiltrosAberto(!filtrosAberto);
-    setOrdenarAberto(false);
-  }
+    const limpar = () => {
+        setSearch("");
+        setFilter("all");
+        setOrdem("padrao");
+    };
 
-  function alternarConsole(valor: string) {
-    if (filtrosSelecionados.includes(valor)) {
-      setFiltrosSelecionados(
-        filtrosSelecionados.filter((item) => item !== valor),
-      );
-    } else {
-      setFiltrosSelecionados([...filtrosSelecionados, valor]);
-    }
-  }
+    if (pricedGames.length === 0) return null;
 
-  const jogosFiltrados = jogos.filter((jogo) => {
-    const correspondePesquisa = jogo.nome
-        .toLowerCase()
-        .includes(pesquisa.trim().toLowerCase());
-
-    const correspondeConsole =
-        filtrosSelecionados.length === 0 ||
-        jogo.consoles.some((console) =>
-            filtrosSelecionados.includes(console)
-        );
-
-    return correspondePesquisa && correspondeConsole;
-});
-
-  const jogosOrdenados = [...jogosFiltrados].sort((a, b) => {
-    switch (ordenacao) {
-      case "nome-az":
-        return a.nome.localeCompare(b.nome);
-
-      case "nome-za":
-        return b.nome.localeCompare(a.nome);
-
-      case "preco-menor":
-        return a.valor - b.valor;
-
-      case "preco-maior":
-        return b.valor - a.valor;
-
-      default:
-        return 0;
-    }
-  });
-
-  return (
-<>
-   {/* <Header /> */}
-
-    <main>
-      <h1 id="titulo-jogos">JOGOS À VENDA</h1>
-
-      <div id="container-filtro">
-        <button id="botao-filtros" type="button" onClick={alternarFiltros}>
-          <span className="texto-botao">Filtros</span>
-        </button>
-        <button id="botao-ordenar" type="button" onClick={alternarOrdenar}>
-          <span className="texto-botao">Ordenar por</span>
-          <img src="/ordenar.png" alt="seta de ordenação" />
-        </button>
-        <input
-          id="botao-pesquisar"
-          type="text"
-          placeholder="Pesquise um jogo"
-          value={pesquisa}
-          onChange={(e) => setPesquisa(e.target.value)}
-        />
-
-        {filtrosAberto && (
-          <div id="lista-filtros">
-            {opcoesFiltro.map((opcao) => (
-              <button
-                key={opcao.valor}
-                type="button"
-                className={
-                  filtrosSelecionados.includes(opcao.valor)
-                    ? "opcao-ordenar opcao-ativa"
-                    : "opcao-ordenar"
-                }
-                onClick={() => alternarConsole(opcao.valor)}
-              >
-                {opcao.texto}
-              </button>
-            ))}
-          </div>
-        )}
-
-        {ordenarAberto && (
-          <div id="lista-ordenar">
-            {opcoesOrdenacao.map((opcao) => (
-              <button
-                key={opcao.valor}
-                type="button"
-                className={
-                  ordenacao === opcao.valor
-                    ? "opcao-ordenar opcao-ativa"
-                    : "opcao-ordenar"
-                }
-                onClick={() =>
-                  setOrdenacao(
-                    ordenacao === opcao.valor ? "nome-az" : opcao.valor,
-                  )
-                }
-              >
-                {opcao.texto}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div id="container-jogos">
-        {jogosOrdenados.map((jogo) => (
-          <CardJogo key={jogo.id} jogo={jogo} />
-        ))}
-      </div>
-
-      {jogosOrdenados.length === 0 && (
-        <p id="sem-resultados">Nenhum jogo encontrado</p>
-      )}
-    </main>
-
-</>
-  );
+    return (
+        <Pagina eyebrow="SELECT YOUR GAME" title="Jogos à venda" count={plural(lista.length, "jogo", "jogos")}>
+            <Toolbar
+                search={search}
+                onSearch={setSearch}
+                placeholder="Pesquise um jogo"
+                sort={{ value: ordem, options: ordens, onChange: (v) => setOrdem(v as Ordem) }}
+            />
+            <Chips label="Filtrar por plataforma" value={filter} options={chipOptions} onChange={(v) => setFilter(v as PlatformFilter)} />
+            {lista.length > 0 ? (
+                <div className={styles.grid}>
+                    {lista.map((item) => (
+                        <GameCard key={item.game.slug} item={item} showPlatforms compact />
+                    ))}
+                </div>
+            ) : (
+                <Vazio onClear={limpar}>Nenhum jogo encontrado</Vazio>
+            )}
+        </Pagina>
+    );
 }
