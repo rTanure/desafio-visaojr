@@ -74,7 +74,7 @@ export function Diretores() {
                 sort={{ value: ordem, options: ordens, onChange: (v) => setOrdem(v as Ordem) }}
             />
             {lista.length > 0 ? (
-                <div className={styles.grid}>
+                <div className={`${styles.grid} ${styles.gridWide}`}>
                     {lista.map((d) => (
                         <CardDiretor key={d.director.slug} director={d.director} gameCount={d.gameCount} tone={d.tone} />
                     ))}

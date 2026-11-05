@@ -39,7 +39,7 @@
 .toneBlue { background: var(--blue); color: #ffffff; }
 .toneGreen { background: var(--green); }
 .toneYellow { background: var(--yellow); }
-.toneSky { background: var(--hero); }
+.toneSky { background: var(--hero); color: var(--ink); }
 
 .who {
     display: flex;
