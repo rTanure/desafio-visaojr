@@ -1,0 +1,166 @@
+/* Blocos comuns das telas de detalhe (valores da canvas). */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 8px 10px;
+    font-family: var(--font-pixel);
+    font-size: 10px;
+    line-height: 1.5;
+    background: var(--navy);
+    color: var(--yellow);
+}
+
+.tagRed {
+    background: var(--red);
+    color: #ffffff;
+}
+
+.tagGreen {
+    background: var(--green);
+    color: var(--navy);
+}
+
+.h1 {
+    margin: 0;
+    font-family: var(--font-pixel);
+    font-size: clamp(24px, 2.8vw, 36px);
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+.legend {
+    padding: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-pixel);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.option {
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.panelTitle {
+    margin: 0 0 12px;
+    font-family: var(--font-pixel);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.spec {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 3px dashed var(--surface2);
+}
+
+.spec:last-child {
+    border-bottom: 0;
+}
+
+.spec dt {
+    color: var(--muted);
+}
+
+.spec dd {
+    margin: 0;
+    font-weight: 700;
+    text-align: right;
+}
+
+.priceBox {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.old {
+    color: var(--muted);
+    text-decoration: line-through;
+}
+
+.priceNow {
+    font-family: var(--font-pixel);
+    font-size: 26px;
+    line-height: 1.5;
+    color: var(--red);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.cta {
+    min-height: 56px;
+    padding: 0 24px;
+    font-size: 12px;
+    flex: 1 1 200px;
+}
+
+@media (max-width: 767px) {
+    .tags {
+        gap: 8px;
+    }
+
+    .tag {
+        padding: 6px 8px;
+        font-size: 9px;
+    }
+
+    .h1 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .legend {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .panelTitle {
+        margin-bottom: 6px;
+        font-size: 13px;
+    }
+
+    .spec {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .priceBox {
+        padding: 16px;
+        gap: 2px;
+    }
+
+    .priceNow {
+        font-size: 18px;
+    }
+
+    .cta {
+        flex: none;
+        min-height: 56px;
+        font-size: 11px;
+        padding: 0 16px;
+    }
+}

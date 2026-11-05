@@ -3,6 +3,7 @@ import './CardJogo.css';
 export type Jogo = {
     id: number;
     nome: string;
+    slug?: string; // slug em data/games.ts, quando o jogo existe lá
     imagem: string;
     valor: number;
     consoles: string[];

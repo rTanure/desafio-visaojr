@@ -1,0 +1,35 @@
+.crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.crumbs a {
+    color: var(--ink);
+}
+
+.item {
+    display: contents;
+}
+
+.back {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .crumbs {
+        display: none;
+    }
+
+    .back {
+        display: inline-flex;
+    }
+}

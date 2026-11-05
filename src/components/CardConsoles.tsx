@@ -1,9 +1,12 @@
 
+import type { RegisteredPlatforms } from '../data/platforms';
 import './CardConsoles.css';
 
 export type Console = {
     id: number;
     nome: string;
+    slug?: string;
+    plataforma?: RegisteredPlatforms; // plataforma de jogos que o console roda
     imagem: string;
     valor: number;
     fabricante: string;
