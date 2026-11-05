@@ -1,14 +1,14 @@
 import "./SavePoint.css";
 
-import zeldaImg from "../../public/img/cardsProntos/card-zelda.png";
-import falloutImg from "../../public/img/cardsProntos/card-fallout.png";
-import portalImg from "../../public/img/cardsProntos/card-portal.png";
-import bioshockImg from "../../public/img/cardsProntos/card-bioshock.png";
+const zeldaImg = "/img/cardsProntos/card-zelda.png";
+const falloutImg = "/img/cardsProntos/card-fallout.png";
+const portalImg = "/img/cardsProntos/card-portal.png";
+const bioshockImg = "/img/cardsProntos/card-bioshock.png";
 
-import zeldaMobileImg from "../../public/img/cardsProntos/mobile-card-zelda.png";
-import falloutMobileImg from "../../public/img/cardsProntos/mobile-card-fallout.png";
-import portalMobileImg from "../../public/img/cardsProntos/mobile-card-portal.png";
-import bioshockMobileImg from "../../public/img/cardsProntos/mobile-card-bioshock.png";
+const zeldaMobileImg = "/img/cardsProntos/mobile-card-zelda.png";
+const falloutMobileImg = "/img/cardsProntos/mobile-card-fallout.png";
+const portalMobileImg = "/img/cardsProntos/mobile-card-portal.png";
+const bioshockMobileImg = "/img/cardsProntos/mobile-card-bioshock.png";
 
 
 

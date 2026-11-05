@@ -9,7 +9,7 @@ export type Game = {
     director: RegisteredDirectors
     platforms: RegisteredPlatforms[]
     description: string
-    media: string[] // trailer do youtube primeiro, depois imagens em /public/games/<slug>/
+    media: string[] // trailer do youtube primeiro, depois imagens em /games/<slug>/
 }
 
 export const games = {
