@@ -1,0 +1,104 @@
+.section {
+    padding: 96px 0;
+}
+
+.card {
+    background: var(--yellow);
+    color: var(--navy);
+    padding: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.copy {
+    flex: 1 1 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.title {
+    margin: 0;
+    font-family: var(--font-pixel);
+    font-size: clamp(20px, 2.4vw, 30px);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.text {
+    margin: 0;
+    max-width: 560px;
+    font-size: 21px;
+}
+
+.short {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.btn {
+    min-height: 56px;
+    padding: 0 24px;
+    font-size: 12px;
+}
+
+@media (max-width: 767px) {
+    .section {
+        padding: 44px 0 48px;
+    }
+
+    .card {
+        padding: 24px;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .copy {
+        flex: none;
+        width: 100%;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .title {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .long {
+        display: none;
+    }
+
+    .short {
+        display: inline;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .btn {
+        min-height: 52px;
+        padding: 0 16px;
+        font-size: 10px;
+    }
+
+    .trophy {
+        display: none;
+    }
+}
