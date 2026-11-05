@@ -26,10 +26,10 @@ export function Consoles() {
                                 </span>
                                 <span className={styles.price}>{formatPrice(c.valor)}</span>
                                 <div className={styles.actions}>
-                                    <Button variant="primary" to="/consoles" className={styles.buy}>
+                                    <Button variant="primary" to={`/consoles/${c.slug}`} className={styles.buy}>
                                         Comprar
                                     </Button>
-                                    <Button variant="secondary" to="/consoles" className={styles.see}>
+                                    <Button variant="secondary" to={`/consoles/${c.slug}#jogos`} className={styles.see}>
                                         Ver jogos<span className={styles.caret}> ▸</span>
                                     </Button>
                                 </div>

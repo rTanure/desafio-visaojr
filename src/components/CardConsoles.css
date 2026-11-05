@@ -112,3 +112,12 @@
         margin: 0 12px 10px;
     }
 }
+
+.card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: inherit;
+}

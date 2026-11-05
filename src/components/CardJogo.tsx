@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './CardJogo.css';
 
 export type Jogo = {
@@ -15,8 +16,8 @@ type CardJogoProps = {
 };
 
 export function CardJogo({ jogo }: CardJogoProps) {
-    return (
-        <div className="card-jogo">
+    const content = (
+        <>
             <img className="card-jogo-imagem" src={jogo.imagem} alt={jogo.nome} />
             
             <div className="card-jogo-info">
@@ -37,7 +38,15 @@ export function CardJogo({ jogo }: CardJogoProps) {
                  </div>
 
             </div>
-            
-        </div>  
-    )
+        </>
+    );
+
+    if (jogo.slug) {
+        return (
+            <Link to={`/jogos/${jogo.slug}`} className="card-jogo card-link">
+                {content}
+            </Link>
+        );
+    }
+    return <div className="card-jogo">{content}</div>;
 }

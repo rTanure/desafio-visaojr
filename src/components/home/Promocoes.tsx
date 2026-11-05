@@ -22,7 +22,7 @@ export function Promocoes() {
                 </div>
                 <div className={styles.grid}>
                     {promoGames.map((g) => (
-                        <Link key={g.game.slug} to="/jogos" className={`${shared.box} ${shared.lift} ${styles.card}`}>
+                        <Link key={g.game.slug} to={`/jogos/${g.game.slug}`} className={`${shared.box} ${shared.lift} ${styles.card}`}>
                             <span className={styles.off}>-{g.discount}%</span>
                             <div className={shared.cover}>
                                 <img className={shared.coverImg} src={g.cover} alt="" loading="lazy" />

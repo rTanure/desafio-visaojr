@@ -1,5 +1,6 @@
 
 import type { RegisteredPlatforms } from '../data/platforms';
+import { Link } from 'react-router-dom';
 import './CardConsoles.css';
 
 export type Console = {
@@ -19,8 +20,8 @@ type CardConsoleProps = {
 };
 
 export function CardConsole({ console: videogame }: CardConsoleProps) {
-    return (
-        <div className="card-console">
+    const content = (
+        <>
             <img
                 className="card-console-imagem"
                 src={videogame.imagem}
@@ -47,6 +48,15 @@ export function CardConsole({ console: videogame }: CardConsoleProps) {
                     </span>
                 </div>
             </div>
-        </div>
+        </>
     );
+
+    if (videogame.slug) {
+        return (
+            <Link to={`/consoles/${videogame.slug}`} className="card-console card-link">
+                {content}
+            </Link>
+        );
+    }
+    return <div className="card-console">{content}</div>;
 }

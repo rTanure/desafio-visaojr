@@ -44,7 +44,7 @@ export function Jogos() {
 
                 <div className={styles.grid}>
                     {visible.map((g) => (
-                        <Link key={g.game.slug} to="/jogos" className={`${shared.box} ${shared.lift} ${styles.card}`}>
+                        <Link key={g.game.slug} to={`/jogos/${g.game.slug}`} className={`${shared.box} ${shared.lift} ${styles.card}`}>
                             <div className={shared.cover}>
                                 <img className={shared.coverImg} src={g.cover} alt="" loading="lazy" />
                             </div>

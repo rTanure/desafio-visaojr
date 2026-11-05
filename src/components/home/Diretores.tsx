@@ -104,7 +104,7 @@ export function Diretores() {
                     aria-label="Grandes diretores"
                 >
                     {directorCards.map((card, i) => (
-                        <Link key={card.director.slug} to="/jogos" className={`${shared.box} ${shared.lift} ${styles.card}`}>
+                        <Link key={card.director.slug} to={`/diretores/${card.director.slug}`} className={`${shared.box} ${shared.lift} ${styles.card}`}>
                             <Portrait card={card} tone={tones[i % tones.length]} />
                             <div className={styles.info}>
                                 <span className={styles.name}>{card.director.name}</span>
