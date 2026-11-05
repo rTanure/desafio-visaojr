@@ -1,0 +1,180 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&family=Press+Start+2P&family=VT323&display=swap');
+
+
+.secao-depoimentos {
+  width: 100%;
+  background-color: #e8eeff; 
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  
+  border-top: 3px solid #1a1c4b;
+  border-bottom: 3px solid #1a1c4b;
+
+}
+
+
+
+.subtitulo-depoimentos {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: #e74c3c;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+
+
+
+
+.titulo-depoimentos {
+  font-family: 'Press Start 2P', monospace, cursive;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #1a1c4b;
+}
+
+
+
+
+.card-depoimento {
+    background-color: #ffffff;
+    border: 3px solid #1a1c4b;
+    box-shadow: 6px 6px 0px #1a1c4b;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.estrelas {
+  color: #ffb800;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+
+
+.mensagem-depoimento {
+  font-family: 'VT323', monospace;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: #1a1c4b;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.5px;
+}
+
+
+
+.card-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+
+
+.foto-depoimento {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #1a1c4b;
+  border-radius: 0;
+  box-shadow: 3px 3px 0px #1a1c4b;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+
+
+.info-usuario,
+.nome-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.nome-depoimento {
+  font-family: 'VT323', monospace;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #1a1c4b;
+  margin: 0;
+  line-height: 1.1;
+}
+
+
+
+.compra-depoimento {
+  font-family: 'VT323', monospace;
+  font-size: 1.05rem;
+  color: #4a4b68;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media (min-width: 768px) {
+  
+  .card-depoimento {
+    max-width: 350px;
+  }
+}
+
+
+
+.secao-depoimentos .carousel {
+    width: 100%;
+    height: auto;
+}
+
+
+.secao-depoimentos .carousel-container {
+    height: auto;
+}
+
+.secao-depoimentos .carousel-list {
+    align-items: stretch;
+}
+
+.secao-depoimentos .carousel-slide {
+    height: auto;
+    padding: 8px;
+}
+
+
+.secao-depoimentos .carousel {
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.secao-depoimentos .carousel .minimap {
+    bottom: 5px;
+}
+
+
+
+.secao-depoimentos .carousel .minimap button {
+    background-color: #b8bfd6;
+}
+
+.secao-depoimentos .carousel .minimap button.atual {
+    background-color: #e74c3c;
+}

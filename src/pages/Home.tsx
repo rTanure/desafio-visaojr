@@ -1,10 +1,26 @@
-import { Link } from "react-router-dom";
+import { Banner } from "../components/Banner/Banner";
+import { JogosDestaque } from "../components/JogosDestaque";
+import { SavePoint } from "../components/SavePoint";
+import { Depoimentos } from "../components/depoimentos";
+import { BannerCTA } from "../components/BannerCTA";
+import { Footer } from "../components/footer";
 
 export function Home() {
     return (
-        <div>
-            <h1>Home</h1>
-            <button><Link to={"/sobre"}>Ir para tela Sobre</Link></button>
-        </div>
+        <>
+            <div>
+                <Banner />
+            </div>
+
+            <JogosDestaque />
+
+            <SavePoint />
+
+            <Depoimentos />
+
+            <BannerCTA />
+
+            <Footer />
+        </>
     )
 }
